@@ -32,15 +32,10 @@ class ServiceAPI: NSObject {
                     let jsonDic = JSON(data: result)
                     
                     let jsonValueDic = jsonDic.rawValue as! NSDictionary
-//                    
-//                    print("*** jsonValueDic: \(jsonValueDic)")
-//                    print("*** valueRovers: \(jsonValueDic.object(forKey: "rovers"))")
                     let jsonArray = jsonValueDic.object(forKey: "rovers") as! NSArray
-//                    print("*** count: \(jsonArray.count)")
-                    
+
                     for item in jsonArray {
                         let rover = Rovers.init(object: item)
-//                        print("*** -> this.item: \(rover.name)")
                         resultArray.append(rover)
                     }
                     
@@ -80,3 +75,32 @@ class ServiceAPI: NSObject {
     }
 
 }
+
+
+
+
+
+// Usage:
+//
+//ServiceAPI.getRovers(params: Array(), success: {
+//    (rovers) -> Void in
+//    
+//    // get api results
+//    for rover in rovers {
+//        print("----> name: \(rover.name!)")
+//        print("    -> status: \(rover.status!)")
+//        print("    -> max_sol: \(rover.maxSol!)")
+//        print("    -> max_date: \(rover.maxDate!)")
+//        print("    -> landingDate: \(rover.landingDate!)")
+//        //  landingDate
+//    }
+//    
+//}) {
+//    (error) -> Void in
+//    print(error)
+//}
+
+
+
+
+
