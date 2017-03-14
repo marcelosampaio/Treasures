@@ -20,38 +20,21 @@ class ViewController: UIViewController {
         ////////////////
         
         ServiceAPI.getRovers(params: Array(), success: {
-            (itemsArray) -> Void in
+            (rovers) -> Void in
             
             // get api results
-            print("> after api call   count: \(itemsArray.count)")
+            for rover in rovers {
+                
+                print("----> name: \(rover.name!)")
+                
+            }
             
         }) {
             (error) -> Void in
             print(error)
         }
 
-        
-        
-        
-//        Alamofire.request(url, method: .get).responseJSON(completionHandler: {
-//            response in
-//            
-//            if response.result.isSuccess {
-//                
-//                print("Response.data: \(response.data)")
-//                
-//                
-//                
-//            }else{
-//                print("*** an error has occurred")
-//
-//            }
-//            
-//        })
-        
-        
-        
-        
+
     }
 
     

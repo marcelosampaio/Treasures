@@ -32,16 +32,15 @@ class ServiceAPI: NSObject {
                     let jsonDic = JSON(data: result)
                     
                     let jsonValueDic = jsonDic.rawValue as! NSDictionary
-                    
-                    print("*** jsonValueDic: \(jsonValueDic)")
-                    print("*** valueRovers: \(jsonValueDic.object(forKey: "rovers"))")
+//                    
+//                    print("*** jsonValueDic: \(jsonValueDic)")
+//                    print("*** valueRovers: \(jsonValueDic.object(forKey: "rovers"))")
                     let jsonArray = jsonValueDic.object(forKey: "rovers") as! NSArray
-                    print("*** count: \(jsonArray.count)")
+//                    print("*** count: \(jsonArray.count)")
                     
                     for item in jsonArray {
                         let rover = Rovers.init(object: item)
-                        print("*** -> this.item: \(rover.name)")
-                        
+//                        print("*** -> this.item: \(rover.name)")
                         resultArray.append(rover)
                     }
                     
