@@ -13,6 +13,10 @@
 		9C0E72701E75A4E200826D68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E726E1E75A4E200826D68 /* Main.storyboard */; };
 		9C0E72721E75A4E200826D68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E72711E75A4E200826D68 /* Assets.xcassets */; };
 		9C0E72751E75A4E200826D68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E72731E75A4E200826D68 /* LaunchScreen.storyboard */; };
+		9C0E72831E76E0EC00826D68 /* Cameras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E72811E76E0EC00826D68 /* Cameras.swift */; };
+		9C0E72841E76E0ED00826D68 /* Rovers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E72821E76E0EC00826D68 /* Rovers.swift */; };
+		9C0E72871E76E2D700826D68 /* ServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E72861E76E2D700826D68 /* ServiceAPI.swift */; };
+		9C4855421E7835BA007FA6F6 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C4855411E7835BA007FA6F6 /* Config.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		9C0E72711E75A4E200826D68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C0E72741E75A4E200826D68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C0E72761E75A4E200826D68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C0E72811E76E0EC00826D68 /* Cameras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cameras.swift; sourceTree = "<group>"; };
+		9C0E72821E76E0EC00826D68 /* Rovers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rovers.swift; sourceTree = "<group>"; };
+		9C0E72861E76E2D700826D68 /* ServiceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceAPI.swift; sourceTree = "<group>"; };
+		9C4855411E7835BA007FA6F6 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		A9A7A1FF3CE85161708198B1 /* Pods_Treasures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Treasures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1827ED7B85CF6EEB635A8A /* Pods-Treasures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treasures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Treasures/Pods-Treasures.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,14 +78,74 @@
 		9C0E72691E75A4E200826D68 /* Treasures */ = {
 			isa = PBXGroup;
 			children = (
-				9C0E726A1E75A4E200826D68 /* AppDelegate.swift */,
-				9C0E726C1E75A4E200826D68 /* ViewController.swift */,
-				9C0E726E1E75A4E200826D68 /* Main.storyboard */,
-				9C0E72711E75A4E200826D68 /* Assets.xcassets */,
-				9C0E72731E75A4E200826D68 /* LaunchScreen.storyboard */,
-				9C0E72761E75A4E200826D68 /* Info.plist */,
+				9C0E72851E76E2A600826D68 /* Service */,
+				9C0E72801E76E0B000826D68 /* Model */,
+				9C0E727F1E76E02B00826D68 /* Controllers */,
+				9C0E727E1E76E00E00826D68 /* Root */,
+				9C0E727D1E76DFFD00826D68 /* Assets */,
+				9C0E727C1E76DFE500826D68 /* User Interface */,
+				9C4855431E7835C4007FA6F6 /* Resources */,
 			);
 			path = Treasures;
+			sourceTree = "<group>";
+		};
+		9C0E727C1E76DFE500826D68 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				9C0E726E1E75A4E200826D68 /* Main.storyboard */,
+				9C0E72731E75A4E200826D68 /* LaunchScreen.storyboard */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		9C0E727D1E76DFFD00826D68 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9C0E72711E75A4E200826D68 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		9C0E727E1E76E00E00826D68 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				9C0E726A1E75A4E200826D68 /* AppDelegate.swift */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
+		9C0E727F1E76E02B00826D68 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C0E726C1E75A4E200826D68 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9C0E72801E76E0B000826D68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C0E72811E76E0EC00826D68 /* Cameras.swift */,
+				9C0E72821E76E0EC00826D68 /* Rovers.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9C0E72851E76E2A600826D68 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9C0E72861E76E2D700826D68 /* ServiceAPI.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		9C4855431E7835C4007FA6F6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C0E72761E75A4E200826D68 /* Info.plist */,
+				9C4855411E7835BA007FA6F6 /* Config.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		D05DB9C5B49C4E65C7F21CA9 /* Frameworks */ = {
@@ -151,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C4855421E7835BA007FA6F6 /* Config.plist in Resources */,
 				9C0E72751E75A4E200826D68 /* LaunchScreen.storyboard in Resources */,
 				9C0E72721E75A4E200826D68 /* Assets.xcassets in Resources */,
 				9C0E72701E75A4E200826D68 /* Main.storyboard in Resources */,
@@ -212,6 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C0E72871E76E2D700826D68 /* ServiceAPI.swift in Sources */,
+				9C0E72841E76E0ED00826D68 /* Rovers.swift in Sources */,
+				9C0E72831E76E0EC00826D68 /* Cameras.swift in Sources */,
 				9C0E726D1E75A4E200826D68 /* ViewController.swift in Sources */,
 				9C0E726B1E75A4E200826D68 /* AppDelegate.swift in Sources */,
 			);
@@ -379,6 +451,7 @@
 				9C0E727B1E75A4E200826D68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

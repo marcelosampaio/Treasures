@@ -7,19 +7,55 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class ViewController: UIViewController {
 
+    
+    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        ////////////////
+        
+        ServiceAPI.getRovers(params: Array(), success: {
+            (itemsArray) -> Void in
+            
+            // get api results
+            print("> after api call   count: \(itemsArray.count)")
+            
+        }) {
+            (error) -> Void in
+            print(error)
+        }
+
+        
+        
+        
+//        Alamofire.request(url, method: .get).responseJSON(completionHandler: {
+//            response in
+//            
+//            if response.result.isSuccess {
+//                
+//                print("Response.data: \(response.data)")
+//                
+//                
+//                
+//            }else{
+//                print("*** an error has occurred")
+//
+//            }
+//            
+//        })
+        
+        
+        
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
+    
+    
 }
 
