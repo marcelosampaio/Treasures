@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,7 +33,27 @@
                             <outlet property="delegate" destination="IrD-bD-fyr" id="FMi-KU-z5R"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Mars Rovers" id="Vs8-vk-pQ7"/>
+                    <navigationItem key="navigationItem" title="Mars Rovers" id="Vs8-vk-pQ7">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="BMc-mn-Yz5">
+                            <view key="customView" contentMode="scaleToFill" id="BOr-ZY-Rhu">
+                                <rect key="frame" x="276" y="5" width="83" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rOx-tK-vee">
+                                        <rect key="frame" x="55" y="6" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="rOx-tK-vee" firstAttribute="trailing" secondItem="BOr-ZY-Rhu" secondAttribute="trailingMargin" id="inw-Ou-vcZ"/>
+                                    <constraint firstItem="rOx-tK-vee" firstAttribute="centerY" secondItem="BOr-ZY-Rhu" secondAttribute="centerY" id="qSz-uL-GBr"/>
+                                </constraints>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="rOx-tK-vee" id="0eV-bO-RYZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNE-Rx-RAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

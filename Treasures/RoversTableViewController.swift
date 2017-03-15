@@ -10,6 +10,9 @@ import UIKit
 
 class RoversTableViewController: UITableViewController {
     
+    // MARK: - Outlets
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
     // MARK: Properties
     private var source = [Rovers]()
     
@@ -31,6 +34,8 @@ class RoversTableViewController: UITableViewController {
         
         self.source = [Rovers]()
         
+        setActivityIndicator(show: true)
+        
         // load mars rovers
         ServiceAPI.getRovers(params: Array(), success: {
             (rovers) -> Void in
@@ -50,6 +55,7 @@ class RoversTableViewController: UITableViewController {
             // reload table view
             if self.source.count > 0 {
                 self.tableView.reloadData()
+                self.setActivityIndicator(show: false)
             }
             
         }) {
@@ -86,5 +92,19 @@ class RoversTableViewController: UITableViewController {
     }
     
 
+    // MARK: - Activity Indicator
+    private func setActivityIndicator(show: Bool) {
+        
+        self.activityIndicator.isHidden = !show
+        if show {
+            self.activityIndicator.startAnimating()
+        }else{
+            self.activityIndicator.stopAnimating()
+        }
+        
+        
+    }
+    
+    
 
 }
