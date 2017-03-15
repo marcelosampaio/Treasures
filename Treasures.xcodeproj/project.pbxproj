@@ -17,6 +17,7 @@
 		9C0E72871E76E2D700826D68 /* ServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E72861E76E2D700826D68 /* ServiceAPI.swift */; };
 		9C4855421E7835BA007FA6F6 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C4855411E7835BA007FA6F6 /* Config.plist */; };
 		9C54CFC71E78A53600B01BC7 /* RoversTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54CFC61E78A53600B01BC7 /* RoversTableViewController.swift */; };
+		9C9350921E79ED8F00142D4B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9350911E79ED8F00142D4B /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9C0E72861E76E2D700826D68 /* ServiceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceAPI.swift; sourceTree = "<group>"; };
 		9C4855411E7835BA007FA6F6 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		9C54CFC61E78A53600B01BC7 /* RoversTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoversTableViewController.swift; sourceTree = "<group>"; };
+		9C9350911E79ED8F00142D4B /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		A9A7A1FF3CE85161708198B1 /* Pods_Treasures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Treasures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1827ED7B85CF6EEB635A8A /* Pods-Treasures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treasures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Treasures/Pods-Treasures.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +80,7 @@
 		9C0E72691E75A4E200826D68 /* Treasures */ = {
 			isa = PBXGroup;
 			children = (
+				9C9350901E79ED4B00142D4B /* Extensions */,
 				9C0E72851E76E2A600826D68 /* Service */,
 				9C0E72801E76E0B000826D68 /* Model */,
 				9C0E727F1E76E02B00826D68 /* Controllers */,
@@ -146,6 +149,14 @@
 				9C4855411E7835BA007FA6F6 /* Config.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		9C9350901E79ED4B00142D4B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9C9350911E79ED8F00142D4B /* UIColor.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		D05DB9C5B49C4E65C7F21CA9 /* Frameworks */ = {
@@ -282,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C0E72871E76E2D700826D68 /* ServiceAPI.swift in Sources */,
+				9C9350921E79ED8F00142D4B /* UIColor.swift in Sources */,
 				9C0E72841E76E0ED00826D68 /* Rovers.swift in Sources */,
 				9C0E72831E76E0EC00826D68 /* Cameras.swift in Sources */,
 				9C54CFC71E78A53600B01BC7 /* RoversTableViewController.swift in Sources */,
