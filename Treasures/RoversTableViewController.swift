@@ -24,13 +24,13 @@ class RoversTableViewController: UITableViewController {
         super.viewDidLoad()
 
         // load source
-        loadSource()
+        getRovers()
         
     }
 
 
     // MARK: - Application Data Source
-    private func loadSource() {
+    private func getRovers() {
         
         self.source = [Rovers]()
         
