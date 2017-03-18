@@ -14,6 +14,8 @@ class RoverTableViewCell: UITableViewCell {
     // MARK: - Outlet
     @IBOutlet var innerBackgroundView: UIView!
     @IBOutlet var roverName: UILabel!
+    @IBOutlet var status: UILabel!
+    @IBOutlet var photosQty: UILabel!
     
     
     

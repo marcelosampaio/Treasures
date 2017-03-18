@@ -47,6 +47,7 @@ class RoversTableViewController: UITableViewController {
                 print("    -> max_sol: \(rover.maxSol!)")
                 print("    -> max_date: \(rover.maxDate!)")
                 print("    -> landingDate: \(rover.landingDate!)")
+                print("    -> total photos: \(rover.totalPhotos!)")
                 
                 // prepare data source
                 self.source.append(rover)
@@ -94,8 +95,8 @@ class RoversTableViewController: UITableViewController {
         
         cell.roverName.text = rover.name
         cell.roverName.textColor = UIColor.black
-        
-
+        cell.status.text = rover.status
+        cell.photosQty.text = String(describing: rover.totalPhotos!)
         return cell
     }
     

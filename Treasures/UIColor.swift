@@ -13,7 +13,7 @@ extension UIColor
 {
     public class var applicationLightBackgroundColor: UIColor
     {
-        return UIColor.lightGray
+        return UIColor(red: 0.93, green: 0.93, blue: 0.93, alpha: 1.00)
     }
     
     public class var applicationDarkBackgroundColor: UIColor

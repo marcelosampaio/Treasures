@@ -10,7 +10,6 @@
 		6D98531F34156D77E9BF6562 /* Pods_Treasures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A7A1FF3CE85161708198B1 /* Pods_Treasures.framework */; };
 		9C0E726B1E75A4E200826D68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E726A1E75A4E200826D68 /* AppDelegate.swift */; };
 		9C0E72701E75A4E200826D68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E726E1E75A4E200826D68 /* Main.storyboard */; };
-		9C0E72721E75A4E200826D68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E72711E75A4E200826D68 /* Assets.xcassets */; };
 		9C0E72751E75A4E200826D68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E72731E75A4E200826D68 /* LaunchScreen.storyboard */; };
 		9C0E72831E76E0EC00826D68 /* Cameras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E72811E76E0EC00826D68 /* Cameras.swift */; };
 		9C0E72841E76E0ED00826D68 /* Rovers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E72821E76E0EC00826D68 /* Rovers.swift */; };
@@ -19,6 +18,7 @@
 		9C54CFC71E78A53600B01BC7 /* RoversTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54CFC61E78A53600B01BC7 /* RoversTableViewController.swift */; };
 		9C9350921E79ED8F00142D4B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9350911E79ED8F00142D4B /* UIColor.swift */; };
 		9C9350981E7D8EF500142D4B /* RoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9350971E7D8EF400142D4B /* RoverTableViewCell.swift */; };
+		9CA1F6D41E7DB0ED00ACF120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1F6D31E7DB0ED00ACF120 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,6 @@
 		9C0E72671E75A4E200826D68 /* Treasures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Treasures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0E726A1E75A4E200826D68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C0E726F1E75A4E200826D68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9C0E72711E75A4E200826D68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C0E72741E75A4E200826D68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C0E72761E75A4E200826D68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C0E72811E76E0EC00826D68 /* Cameras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cameras.swift; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		9C54CFC61E78A53600B01BC7 /* RoversTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoversTableViewController.swift; sourceTree = "<group>"; };
 		9C9350911E79ED8F00142D4B /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		9C9350971E7D8EF400142D4B /* RoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverTableViewCell.swift; sourceTree = "<group>"; };
+		9CA1F6D31E7DB0ED00ACF120 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9A7A1FF3CE85161708198B1 /* Pods_Treasures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Treasures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1827ED7B85CF6EEB635A8A /* Pods-Treasures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treasures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Treasures/Pods-Treasures.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,7 +107,7 @@
 		9C0E727D1E76DFFD00826D68 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				9C0E72711E75A4E200826D68 /* Assets.xcassets */,
+				9CA1F6D31E7DB0ED00ACF120 /* Assets.xcassets */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -243,7 +243,7 @@
 			files = (
 				9C4855421E7835BA007FA6F6 /* Config.plist in Resources */,
 				9C0E72751E75A4E200826D68 /* LaunchScreen.storyboard in Resources */,
-				9C0E72721E75A4E200826D68 /* Assets.xcassets in Resources */,
+				9CA1F6D41E7DB0ED00ACF120 /* Assets.xcassets in Resources */,
 				9C0E72701E75A4E200826D68 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
