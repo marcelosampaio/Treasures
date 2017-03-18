@@ -96,13 +96,27 @@ class RoversTableViewController: UITableViewController {
         cell.roverName.text = rover.name
         cell.roverName.textColor = UIColor.black
         cell.status.text = rover.status
-        cell.photosQty.text = String(describing: rover.totalPhotos!)
+        cell.photosQty.text = String(describing: rover.totalPhotos!) + " Photos"
+        cell.camsQty.text = String(describing: rover.cameras!.count) + " Cameras"
+        cell.solsQty.text = String(describing: rover.maxSol!) + " Sols"
+        
+        if rover.status == "complete" {
+            cell.status.textColor = UIColor.applicationInactiveStatusColor
+        }else{
+            cell.status.textColor = UIColor.applicationActiveStatusColor
+        }
+        
         return cell
     }
     
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 220
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
     }
     
     

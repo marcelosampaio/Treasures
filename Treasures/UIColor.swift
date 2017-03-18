@@ -31,4 +31,15 @@ extension UIColor
         return UIColor.black
     }
     
+    public class var applicationInactiveStatusColor: UIColor
+    {
+        return UIColor(red: 128.00/255.00, green: 0.00, blue: 0.00, alpha: 1)
+    }
+    
+    public class var applicationActiveStatusColor: UIColor
+    {
+        return UIColor(red: 64.00/255.00, green: 128.00/255.00, blue: 0.00, alpha: 1)
+    }
+    
+    
 }

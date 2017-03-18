@@ -16,6 +16,8 @@ class RoverTableViewCell: UITableViewCell {
     @IBOutlet var roverName: UILabel!
     @IBOutlet var status: UILabel!
     @IBOutlet var photosQty: UILabel!
+    @IBOutlet var camsQty: UILabel!
+    @IBOutlet var solsQty: UILabel!
     
     
     
