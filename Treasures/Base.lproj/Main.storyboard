@@ -14,18 +14,51 @@
         <scene sceneID="VgQ-5Q-coh">
             <objects>
                 <tableViewController id="IrD-bD-fyr" customClass="RoversTableViewController" customModule="Treasures" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="255" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gbs-nd-dsI">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="255" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gbs-nd-dsI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="255" id="a2U-Qa-LbA">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="255" id="a2U-Qa-LbA" customClass="RoverTableViewCell" customModule="Treasures" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="255"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a2U-Qa-LbA" id="UEq-Nk-J6q">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="254"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="255"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2m-S2-G7A">
+                                            <rect key="frame" x="8" y="8" width="359" height="239"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4R-TN-ViY">
+                                                    <rect key="frame" x="8" y="8" width="343" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="rgI-Wh-Xb3"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="o4R-TN-ViY" firstAttribute="trailing" secondItem="Q2m-S2-G7A" secondAttribute="trailingMargin" id="cHS-gO-v3N"/>
+                                                <constraint firstItem="o4R-TN-ViY" firstAttribute="leading" secondItem="Q2m-S2-G7A" secondAttribute="leadingMargin" id="rBA-q6-Yik"/>
+                                                <constraint firstItem="o4R-TN-ViY" firstAttribute="top" secondItem="Q2m-S2-G7A" secondAttribute="topMargin" id="wCE-kw-sAz"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Q2m-S2-G7A" firstAttribute="trailing" secondItem="UEq-Nk-J6q" secondAttribute="trailingMargin" id="HYz-OV-Shl"/>
+                                        <constraint firstItem="Q2m-S2-G7A" firstAttribute="top" secondItem="UEq-Nk-J6q" secondAttribute="topMargin" id="S9h-DB-F1C"/>
+                                        <constraint firstItem="Q2m-S2-G7A" firstAttribute="leading" secondItem="UEq-Nk-J6q" secondAttribute="leadingMargin" id="T59-6E-tED"/>
+                                        <constraint firstItem="Q2m-S2-G7A" firstAttribute="bottom" secondItem="UEq-Nk-J6q" secondAttribute="bottomMargin" id="fGw-CJ-YYA"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="innerBackgroundView" destination="Q2m-S2-G7A" id="Gk0-Q6-guh"/>
+                                    <outlet property="roverName" destination="o4R-TN-ViY" id="9Vm-aY-gCJ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

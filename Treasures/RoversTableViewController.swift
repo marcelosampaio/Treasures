@@ -42,7 +42,7 @@ class RoversTableViewController: UITableViewController {
             
             // get api results
             for rover in rovers {
-                print("----> name: \(rover.name!)")
+                print(" ----> name: \(rover.name!)")
                 print("    -> status: \(rover.status!)")
                 print("    -> max_sol: \(rover.maxSol!)")
                 print("    -> max_date: \(rover.maxDate!)")
@@ -81,17 +81,30 @@ class RoversTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RoverTableViewCell
+        
 
         let rover = source[indexPath.row]
         
-        cell.textLabel?.text = rover.name
+//        cell.textLabel?.text = rover.name
+        cell.innerBackgroundView.backgroundColor = UIColor.applicationLightBackgroundColor
+        cell.innerBackgroundView.layer.borderWidth = 2.00
+        cell.innerBackgroundView.layer.borderColor = UIColor.applicationDetailBorderBackgroundColor.cgColor
+        
+        
+        cell.roverName.text = rover.name
+        cell.roverName.textColor = UIColor.black
         
 
         return cell
     }
     
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+    
+    
     // MARK: - Activity Indicator
     private func setActivityIndicator(show: Bool) {
         
