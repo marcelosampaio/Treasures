@@ -20,6 +20,7 @@
 		9C9350981E7D8EF500142D4B /* RoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9350971E7D8EF400142D4B /* RoverTableViewCell.swift */; };
 		9CA1F6D41E7DB0ED00ACF120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1F6D31E7DB0ED00ACF120 /* Assets.xcassets */; };
 		9CA1F6DC1E7F09C600ACF120 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1F6DB1E7F09C600ACF120 /* Helper.swift */; };
+		9CA1F6DE1E7F2F1700ACF120 /* PhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1F6DD1E7F2F1700ACF120 /* PhotosTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		9C9350971E7D8EF400142D4B /* RoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverTableViewCell.swift; sourceTree = "<group>"; };
 		9CA1F6D31E7DB0ED00ACF120 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CA1F6DB1E7F09C600ACF120 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		9CA1F6DD1E7F2F1700ACF120 /* PhotosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosTableViewController.swift; sourceTree = "<group>"; };
 		A9A7A1FF3CE85161708198B1 /* Pods_Treasures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Treasures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1827ED7B85CF6EEB635A8A /* Pods-Treasures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treasures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Treasures/Pods-Treasures.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				9C54CFC61E78A53600B01BC7 /* RoversTableViewController.swift */,
+				9CA1F6DD1E7F2F1700ACF120 /* PhotosTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				9C0E72841E76E0ED00826D68 /* Rovers.swift in Sources */,
 				9C9350981E7D8EF500142D4B /* RoverTableViewCell.swift in Sources */,
 				9C0E72831E76E0EC00826D68 /* Cameras.swift in Sources */,
+				9CA1F6DE1E7F2F1700ACF120 /* PhotosTableViewController.swift in Sources */,
 				9C54CFC71E78A53600B01BC7 /* RoversTableViewController.swift in Sources */,
 				9C0E726B1E75A4E200826D68 /* AppDelegate.swift in Sources */,
 				9CA1F6DC1E7F09C600ACF120 /* Helper.swift in Sources */,
