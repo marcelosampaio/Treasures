@@ -48,6 +48,10 @@ class RoversTableViewController: UITableViewController {
                 print("    -> max_date: \(rover.maxDate!)")
                 print("    -> landingDate: \(rover.landingDate!)")
                 print("    -> total photos: \(rover.totalPhotos!)")
+                print("    -> cameras: \(rover.cameras!)")
+                for item in rover.cameras! {
+                    print("            > cameras: \(item.fullName)")
+                }
                 
                 // prepare data source
                 self.source.append(rover)

@@ -19,6 +19,7 @@
 		9C9350921E79ED8F00142D4B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9350911E79ED8F00142D4B /* UIColor.swift */; };
 		9C9350981E7D8EF500142D4B /* RoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9350971E7D8EF400142D4B /* RoverTableViewCell.swift */; };
 		9CA1F6D41E7DB0ED00ACF120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1F6D31E7DB0ED00ACF120 /* Assets.xcassets */; };
+		9CA1F6DC1E7F09C600ACF120 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1F6DB1E7F09C600ACF120 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9C9350911E79ED8F00142D4B /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		9C9350971E7D8EF400142D4B /* RoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverTableViewCell.swift; sourceTree = "<group>"; };
 		9CA1F6D31E7DB0ED00ACF120 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CA1F6DB1E7F09C600ACF120 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		A9A7A1FF3CE85161708198B1 /* Pods_Treasures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Treasures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1827ED7B85CF6EEB635A8A /* Pods-Treasures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treasures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Treasures/Pods-Treasures.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +84,7 @@
 		9C0E72691E75A4E200826D68 /* Treasures */ = {
 			isa = PBXGroup;
 			children = (
+				9CA1F6DA1E7F09AA00ACF120 /* Application Helper */,
 				9C9350961E7D8EC100142D4B /* Custom Table View Cells */,
 				9C9350901E79ED4B00142D4B /* Extensions */,
 				9C0E72851E76E2A600826D68 /* Service */,
@@ -168,6 +171,14 @@
 				9C9350971E7D8EF400142D4B /* RoverTableViewCell.swift */,
 			);
 			name = "Custom Table View Cells";
+			sourceTree = "<group>";
+		};
+		9CA1F6DA1E7F09AA00ACF120 /* Application Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9CA1F6DB1E7F09C600ACF120 /* Helper.swift */,
+			);
+			name = "Application Helper";
 			sourceTree = "<group>";
 		};
 		D05DB9C5B49C4E65C7F21CA9 /* Frameworks */ = {
@@ -310,6 +321,7 @@
 				9C0E72831E76E0EC00826D68 /* Cameras.swift in Sources */,
 				9C54CFC71E78A53600B01BC7 /* RoversTableViewController.swift in Sources */,
 				9C0E726B1E75A4E200826D68 /* AppDelegate.swift in Sources */,
+				9CA1F6DC1E7F09C600ACF120 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
