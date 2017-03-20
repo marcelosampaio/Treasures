@@ -21,7 +21,9 @@ class PhotosTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        print("Photos TVC - view did load - rover.name: \(rover.name!)")
+        self.navigationItem.title = rover.name!
+        
+        print("Photos TVC - view did load - rover.name: \(rover.name!)")
         
         
     }

@@ -121,51 +121,26 @@ class RoversTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "showPhotos", sender: self)
-        
-        
-        
     }
     
     
     // MARK: - Activity Indicator
     private func setActivityIndicator(show: Bool) {
-        
         self.activityIndicator.isHidden = !show
         if show {
             self.activityIndicator.startAnimating()
         }else{
             self.activityIndicator.stopAnimating()
         }
-        
-        
     }
     
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showPhotos" {
-            
-            print("** navigation - source.count: \(source.count)")
-            
-            let iP = self.tableView.indexPathForSelectedRow
-            
-    
-            for rover in source {
-                
-                print("    -> item: \(rover.name!)")
-            }
-            
-            let firstRover = source[0]
-            print("       -> roverName[0]: \(firstRover.name!)")
-            print("       -> indexPath: \(iP)")
-            print("       -> indexPath.row: \(iP?.row)")
-            
+            let indexPath = self.tableView.indexPathForSelectedRow
             let photosTVC = segue.destination as! PhotosTableViewController
-            
-            let rover = source[(iP?.row)!]
-            print ("** navigation - prepare For Segue - rover.name: \(rover.name!)")
-            photosTVC.rover = rover
-            
+            photosTVC.rover = source[(indexPath?.row)!]
         }
     }
     
