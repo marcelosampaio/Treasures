@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class PhotosTableViewController: UITableViewController {
 
+    // MARK: Properties
+    var rover = Rovers.init(json: JSON.null)
+    
     
     
     // MARK: - View Life Cycle
@@ -17,6 +21,9 @@ class PhotosTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        print("Photos TVC - view did load - rover.name: \(rover.name!)")
+        
+        
     }
 
 
