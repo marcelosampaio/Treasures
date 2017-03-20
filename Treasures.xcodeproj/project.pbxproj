@@ -21,6 +21,10 @@
 		9CA1F6D41E7DB0ED00ACF120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1F6D31E7DB0ED00ACF120 /* Assets.xcassets */; };
 		9CA1F6DC1E7F09C600ACF120 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1F6DB1E7F09C600ACF120 /* Helper.swift */; };
 		9CA1F6DE1E7F2F1700ACF120 /* PhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1F6DD1E7F2F1700ACF120 /* PhotosTableViewController.swift */; };
+		9CA1F6E31E7F542700ACF120 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1F6DF1E7F542700ACF120 /* Camera.swift */; };
+		9CA1F6E41E7F542700ACF120 /* PhotoResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1F6E01E7F542700ACF120 /* PhotoResults.swift */; };
+		9CA1F6E51E7F542700ACF120 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1F6E11E7F542700ACF120 /* Photos.swift */; };
+		9CA1F6E61E7F542700ACF120 /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1F6E21E7F542700ACF120 /* Rover.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		9CA1F6D31E7DB0ED00ACF120 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CA1F6DB1E7F09C600ACF120 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		9CA1F6DD1E7F2F1700ACF120 /* PhotosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosTableViewController.swift; sourceTree = "<group>"; };
+		9CA1F6DF1E7F542700ACF120 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		9CA1F6E01E7F542700ACF120 /* PhotoResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoResults.swift; sourceTree = "<group>"; };
+		9CA1F6E11E7F542700ACF120 /* Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		9CA1F6E21E7F542700ACF120 /* Rover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
 		A9A7A1FF3CE85161708198B1 /* Pods_Treasures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Treasures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1827ED7B85CF6EEB635A8A /* Pods-Treasures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treasures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Treasures/Pods-Treasures.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +145,10 @@
 		9C0E72801E76E0B000826D68 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9CA1F6DF1E7F542700ACF120 /* Camera.swift */,
+				9CA1F6E01E7F542700ACF120 /* PhotoResults.swift */,
+				9CA1F6E11E7F542700ACF120 /* Photos.swift */,
+				9CA1F6E21E7F542700ACF120 /* Rover.swift */,
 				9C0E72811E76E0EC00826D68 /* Cameras.swift */,
 				9C0E72821E76E0EC00826D68 /* Rovers.swift */,
 			);
@@ -317,12 +329,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA1F6E51E7F542700ACF120 /* Photos.swift in Sources */,
 				9C0E72871E76E2D700826D68 /* ServiceAPI.swift in Sources */,
 				9C9350921E79ED8F00142D4B /* UIColor.swift in Sources */,
+				9CA1F6E41E7F542700ACF120 /* PhotoResults.swift in Sources */,
 				9C0E72841E76E0ED00826D68 /* Rovers.swift in Sources */,
 				9C9350981E7D8EF500142D4B /* RoverTableViewCell.swift in Sources */,
 				9C0E72831E76E0EC00826D68 /* Cameras.swift in Sources */,
 				9CA1F6DE1E7F2F1700ACF120 /* PhotosTableViewController.swift in Sources */,
+				9CA1F6E31E7F542700ACF120 /* Camera.swift in Sources */,
+				9CA1F6E61E7F542700ACF120 /* Rover.swift in Sources */,
 				9C54CFC71E78A53600B01BC7 /* RoversTableViewController.swift in Sources */,
 				9C0E726B1E75A4E200826D68 /* AppDelegate.swift in Sources */,
 				9CA1F6DC1E7F09C600ACF120 /* Helper.swift in Sources */,

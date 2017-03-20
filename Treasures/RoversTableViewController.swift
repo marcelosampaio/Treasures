@@ -50,7 +50,7 @@ class RoversTableViewController: UITableViewController {
                 print("    -> total photos: \(rover.totalPhotos!)")
                 print("    -> cameras: \(rover.cameras!)")
                 for item in rover.cameras! {
-                    print("            > cameras: \(item.fullName)")
+                    print("            > cameras: \(item.fullName!)")
                 }
                 
                 // prepare data source
