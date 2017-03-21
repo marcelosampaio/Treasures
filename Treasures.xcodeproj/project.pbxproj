@@ -16,6 +16,7 @@
 		9C0E72871E76E2D700826D68 /* ServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E72861E76E2D700826D68 /* ServiceAPI.swift */; };
 		9C4855421E7835BA007FA6F6 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C4855411E7835BA007FA6F6 /* Config.plist */; };
 		9C54CFC71E78A53600B01BC7 /* RoversTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C54CFC61E78A53600B01BC7 /* RoversTableViewController.swift */; };
+		9C816B0A1E80E1490072902F /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C816B091E80E1490072902F /* PhotoTableViewCell.swift */; };
 		9C9350921E79ED8F00142D4B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9350911E79ED8F00142D4B /* UIColor.swift */; };
 		9C9350981E7D8EF500142D4B /* RoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9350971E7D8EF400142D4B /* RoverTableViewCell.swift */; };
 		9CA1F6D41E7DB0ED00ACF120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1F6D31E7DB0ED00ACF120 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		9C0E72861E76E2D700826D68 /* ServiceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceAPI.swift; sourceTree = "<group>"; };
 		9C4855411E7835BA007FA6F6 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		9C54CFC61E78A53600B01BC7 /* RoversTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoversTableViewController.swift; sourceTree = "<group>"; };
+		9C816B091E80E1490072902F /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		9C9350911E79ED8F00142D4B /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		9C9350971E7D8EF400142D4B /* RoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverTableViewCell.swift; sourceTree = "<group>"; };
 		9CA1F6D31E7DB0ED00ACF120 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				9C9350971E7D8EF400142D4B /* RoverTableViewCell.swift */,
+				9C816B091E80E1490072902F /* PhotoTableViewCell.swift */,
 			);
 			name = "Custom Table View Cells";
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C816B0A1E80E1490072902F /* PhotoTableViewCell.swift in Sources */,
 				9CA1F6E51E7F542700ACF120 /* Photos.swift in Sources */,
 				9C0E72871E76E2D700826D68 /* ServiceAPI.swift in Sources */,
 				9C9350921E79ED8F00142D4B /* UIColor.swift in Sources */,

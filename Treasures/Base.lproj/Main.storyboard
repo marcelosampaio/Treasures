@@ -194,13 +194,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="v4o-BA-cyR">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="200" id="v4o-BA-cyR" customClass="PhotoTableViewCell" customModule="Treasures" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v4o-BA-cyR" id="CtL-4e-Jun">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wA8-xZ-o5J">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wA8-xZ-o5J" firstAttribute="top" secondItem="CtL-4e-Jun" secondAttribute="top" id="3Dm-Pt-eCu"/>
+                                        <constraint firstItem="wA8-xZ-o5J" firstAttribute="leading" secondItem="CtL-4e-Jun" secondAttribute="leading" id="NWh-Gh-1yG"/>
+                                        <constraint firstAttribute="bottom" secondItem="wA8-xZ-o5J" secondAttribute="bottom" id="cPr-6R-z44"/>
+                                        <constraint firstAttribute="trailing" secondItem="wA8-xZ-o5J" secondAttribute="trailing" id="rmT-yP-ZpY"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageView" destination="wA8-xZ-o5J" id="N43-fb-ebY"/>
+                                    <outlet property="photoView" destination="wA8-xZ-o5J" id="osT-Y5-XNC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -236,7 +251,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="012-Dk-uGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2614" y="-116"/>
+            <point key="canvasLocation" x="2613.5999999999999" y="-116.49175412293854"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pIg-vJ-r7X">

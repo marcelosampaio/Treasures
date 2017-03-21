@@ -19,13 +19,15 @@ class PhotosTableViewController: UITableViewController {
     // MARK: Properties
     public var rover = Rovers.init(json: JSON.null)
     private var photos = [Photos]()
-    
+    private var cache:NSCache<AnyObject, AnyObject>!
     
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.cache = NSCache()
+        
         self.navigationItem.title = rover.name!
         
         // load photos
@@ -40,6 +42,7 @@ class PhotosTableViewController: UITableViewController {
     private func loadPhotos() {
         
         setActivityIndicator(show: true)
+        self.cache.removeAllObjects()
 
         ServiceAPI.getPhotos(roverName: rover.name!.lowercased(), sol: "501", page: "1" , success: {
             (photos) -> Void in
@@ -81,18 +84,40 @@ class PhotosTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PhotoTableViewCell
 
         let photo = photos[indexPath.row]
         
-        cell.textLabel?.text = photo.imgSrc
+        //////////////// IMAGE BEGIN /////////////////////
         
+        if (self.cache.object(forKey: (indexPath as NSIndexPath).row as AnyObject) != nil){
+            cell.photoView?.image = self.cache.object(forKey: (indexPath as NSIndexPath).row as AnyObject) as? UIImage
+        }else{
+            let imgSrc = photo.imgSrc
+            
+            let url = URL(string: imgSrc!)
+            getDataFromUrl(url: url!) { (data, response, error)  in
+                guard let data = data, error == nil else { return }
+                
+                DispatchQueue.main.async() { () -> Void in
+                    cell.photoView?.image = UIImage(data: data)
+                    self.cache.setObject((cell.imageView?.image!)!, forKey: (indexPath as NSIndexPath).row as AnyObject)
+                }
+            }
+        }
+        
+        cell.layer.borderColor = UIColor.applicationDetailBorderBackgroundColor.cgColor
+        cell.layer.borderWidth = 1.5
+        
+        //////////////// IMAGE END /////////////////////
 
         
         return cell
     }
     
-
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
     
     // MARK: - Activity Indicator
     private func setActivityIndicator(show: Bool) {
@@ -104,6 +129,13 @@ class PhotosTableViewController: UITableViewController {
         }
     }
 
+    // MARK: - Image Helper
+    private func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+        URLSession.shared.dataTask(with: url) {
+            (data, response, error) in
+            completion(data, response, error)
+            }.resume()
+    }
     
     
     
