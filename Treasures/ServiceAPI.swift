@@ -125,32 +125,3 @@ class ServiceAPI: NSObject {
     }
 
 }
-
-
-
-
-
-// Usage:
-//
-//ServiceAPI.getRovers(params: Array(), success: {
-//    (rovers) -> Void in
-//    
-//    // get api results
-//    for rover in rovers {
-//        print("----> name: \(rover.name!)")
-//        print("    -> status: \(rover.status!)")
-//        print("    -> max_sol: \(rover.maxSol!)")
-//        print("    -> max_date: \(rover.maxDate!)")
-//        print("    -> landingDate: \(rover.landingDate!)")
-//        //  landingDate
-//    }
-//    
-//}) {
-//    (error) -> Void in
-//    print(error)
-//}
-
-
-
-
-
