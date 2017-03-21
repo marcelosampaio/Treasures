@@ -2,9 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>apiKey</key>
+	<string>maEdYNO5PLZTvmei4ZIFdWZfqO5hkvpTxlefl7Db</string>
 	<key>getRovers</key>
-	<string>https://api.nasa.gov/mars-photos/api/v1/rovers?api_key=maEdYNO5PLZTvmei4ZIFdWZfqO5hkvpTxlefl7Db</string>
+	<string>https://api.nasa.gov/mars-photos/api/v1/rovers?api_key=[APIKEY]</string>
 	<key>getRoverPhotosWithSol</key>
-	<string>https://api.nasa.gov/mars-photos/api/v1/rovers/[ROVER]/photos?sol=[SOL]&amp;page=[PAGE]&amp;api_key=maEdYNO5PLZTvmei4ZIFdWZfqO5hkvpTxlefl7Db</string>
+	<string>https://api.nasa.gov/mars-photos/api/v1/rovers/[ROVER]/photos?sol=[SOL]&amp;page=[PAGE]&amp;api_key=[APIKEY]</string>
 </dict>
 </plist>

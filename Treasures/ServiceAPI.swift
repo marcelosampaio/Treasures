@@ -17,8 +17,9 @@ class ServiceAPI: NSObject {
     // MARK: - Rovers
     class func getRovers(params: Array<Any>, success:@escaping ([Rovers]) -> Void, failure:@escaping (Error) -> Void) {
         
-        let url = getEndpoint(action: "getRovers", param: String())
-        
+        var url = getEndpoint(action: "getRovers", param: String())
+        let apiKey = getEndpoint(action: "apiKey", param: String())
+        url = url.replacingOccurrences(of: "[APIKEY]", with: apiKey)
         
         var resultArray = [Rovers]()
         
@@ -55,10 +56,11 @@ class ServiceAPI: NSObject {
     class func getPhotos(roverName: String, sol: String, page: String, success:@escaping ([Photos]) -> Void, failure:@escaping (Error) -> Void) {
         
         let configUrl = getEndpoint(action: "getRoverPhotosWithSol", param: String())
-        
+        let apiKey = getEndpoint(action: "apiKey", param: String())
         var url = configUrl.replacingOccurrences(of: "[ROVER]", with: roverName)
         url = url.replacingOccurrences(of: "[SOL]", with: sol)
         url = url.replacingOccurrences(of: "[PAGE]", with: page)
+        url = url.replacingOccurrences(of: "[APIKEY]", with: apiKey)
         
         
         print("*** getPhotos url: \(url)")
