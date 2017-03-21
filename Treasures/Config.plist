@@ -4,5 +4,7 @@
 <dict>
 	<key>getRovers</key>
 	<string>https://api.nasa.gov/mars-photos/api/v1/rovers?api_key=maEdYNO5PLZTvmei4ZIFdWZfqO5hkvpTxlefl7Db</string>
+	<key>getRoverPhotosWithSol</key>
+	<string>https://api.nasa.gov/mars-photos/api/v1/rovers/[ROVER]/photos?sol=[SOL]&amp;page=[PAGE]&amp;api_key=maEdYNO5PLZTvmei4ZIFdWZfqO5hkvpTxlefl7Db</string>
 </dict>
 </plist>

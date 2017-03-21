@@ -51,6 +51,53 @@ class ServiceAPI: NSObject {
     }
 
     
+    // MARK: - Rover's Photos
+    class func getPhotos(roverName: String, sol: String, page: String, success:@escaping ([Photos]) -> Void, failure:@escaping (Error) -> Void) {
+        
+        let configUrl = getEndpoint(action: "getRoverPhotosWithSol", param: String())
+        
+        var url = configUrl.replacingOccurrences(of: "[ROVER]", with: roverName)
+        url = url.replacingOccurrences(of: "[SOL]", with: sol)
+        url = url.replacingOccurrences(of: "[PAGE]", with: page)
+        
+        
+        print("*** getPhotos url: \(url)")
+        
+        
+        var resultArray = [Photos]()
+        
+        
+        Alamofire.request(url).responseJSON { (response) -> Void in
+            if response.result.isSuccess {
+                
+                print("*** Success getPhotos API call")
+                
+                if let result = response.data {
+                    let jsonDic = JSON(data: result)
+                    let jsonValueDic = jsonDic.rawValue as! NSDictionary
+                    let jsonArray = jsonValueDic.object(forKey: "photos") as! NSArray
+
+                    for item in jsonArray {
+                        let photo = Photos.init(object: item)
+                        resultArray.append(photo)
+                    }
+                    
+                }
+                success(resultArray)
+            }
+            if response.result.isFailure {
+                print("*** Failure API call")
+                let error : Error = response.result.error!
+                failure(error)
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
     // MARK: - Class Helper
     class func getEndpoint(action: String, param: String) -> String {
         

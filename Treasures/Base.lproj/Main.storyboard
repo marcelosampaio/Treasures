@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -177,7 +178,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="rOx-tK-vee" id="0eV-bO-RYZ"/>
-                        <segue destination="rdY-ha-quA" kind="show" identifier="showPhotos" id="G16-Ix-qPL"/>
+                        <segue destination="A4t-Ey-61B" kind="show" identifier="showPhotos" id="euf-iN-ZZl"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNE-Rx-RAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -185,32 +186,57 @@
             <point key="canvasLocation" x="1826.4000000000001" y="-116.49175412293854"/>
         </scene>
         <!--Photos Table View Controller-->
-        <scene sceneID="uoO-mb-sme">
+        <scene sceneID="J2G-nS-hf9">
             <objects>
-                <tableViewController id="rdY-ha-quA" customClass="PhotosTableViewController" customModule="Treasures" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xjv-mB-SxD">
+                <tableViewController id="A4t-Ey-61B" customClass="PhotosTableViewController" customModule="Treasures" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BjU-i9-kXI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ull-9i-Ecb">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="v4o-BA-cyR">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ull-9i-Ecb" id="QRd-rM-FvZ">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v4o-BA-cyR" id="CtL-4e-Jun">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="rdY-ha-quA" id="Spg-pk-ZYv"/>
-                            <outlet property="delegate" destination="rdY-ha-quA" id="7bo-Hg-eNh"/>
+                            <outlet property="dataSource" destination="A4t-Ey-61B" id="imD-f0-b87"/>
+                            <outlet property="delegate" destination="A4t-Ey-61B" id="7H8-6M-y96"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="58c-Hy-Puz">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="sqJ-9h-aFt">
+                            <view key="customView" contentMode="scaleToFill" id="7hY-5L-K5L">
+                                <rect key="frame" x="276" y="5" width="83" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rUc-4l-VJE">
+                                        <rect key="frame" x="55" y="6" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="rUc-4l-VJE" secondAttribute="height" multiplier="1:1" id="TPa-SQ-SK8"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="rUc-4l-VJE" firstAttribute="top" secondItem="7hY-5L-K5L" secondAttribute="top" constant="6" id="bar-nB-49e"/>
+                                    <constraint firstAttribute="bottom" secondItem="rUc-4l-VJE" secondAttribute="bottom" constant="7" id="sQ1-jm-tBo"/>
+                                    <constraint firstAttribute="trailing" secondItem="rUc-4l-VJE" secondAttribute="trailing" constant="8" id="z4d-6l-wRj"/>
+                                </constraints>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="rUc-4l-VJE" id="byo-G8-Rsa"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nKU-Vu-svr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="012-Dk-uGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2793" y="-116"/>
+            <point key="canvasLocation" x="2614" y="-116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pIg-vJ-r7X">
