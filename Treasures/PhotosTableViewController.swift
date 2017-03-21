@@ -40,27 +40,26 @@ class PhotosTableViewController: UITableViewController {
     private func loadPhotos() {
         
         setActivityIndicator(show: true)
-        
 
-
-        ServiceAPI.getPhotos(roverName: rover.name!.lowercased(), sol: "1000", page: "2" , success: {
+        ServiceAPI.getPhotos(roverName: rover.name!.lowercased(), sol: "501", page: "1" , success: {
             (photos) -> Void in
             
             // get api results
             for photo in photos {
                 self.photos.append(photo)
-                print("-- photo.rover: \(photo.rover?.name)  -- photo imgSrc: \(photo.imgSrc)")
             }
     
+            print("**** loaded \(self.photos.count) photos.")
+            
             // reload table view
             if self.photos.count > 0 {
                 self.tableView.reloadData()
-                self.setActivityIndicator(show: false)
             }
+            self.setActivityIndicator(show: false)
             
         }) {
             (error) -> Void in
-            print(error)
+            print("***** ERROR: \(error)")
         }
         
         

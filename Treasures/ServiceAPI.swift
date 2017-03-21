@@ -75,13 +75,16 @@ class ServiceAPI: NSObject {
                 if let result = response.data {
                     let jsonDic = JSON(data: result)
                     let jsonValueDic = jsonDic.rawValue as! NSDictionary
-                    let jsonArray = jsonValueDic.object(forKey: "photos") as! NSArray
-
-                    for item in jsonArray {
-                        let photo = Photos.init(object: item)
-                        resultArray.append(photo)
-                    }
                     
+                    if jsonValueDic["errors"] == nil {
+                        print("*** ERROR 1 key NOT FOUND")
+                        let jsonArray = jsonValueDic.object(forKey: "photos") as! NSArray
+                        
+                        for item in jsonArray {
+                            let photo = Photos.init(object: item)
+                            resultArray.append(photo)
+                        }
+                    }
                 }
                 success(resultArray)
             }
