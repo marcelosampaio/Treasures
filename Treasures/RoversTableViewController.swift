@@ -16,13 +16,11 @@ class RoversTableViewController: UITableViewController {
     // MARK: Properties
     private var source = [Rovers]()
     
-    
-    
     // MARK: - View Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // load source
         getRovers()
         
